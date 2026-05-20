@@ -1,0 +1,170 @@
+:root {
+  --chitkara-red: #c53c34;
+  --chitkara-blue: #003a70;
+  --bg-light: #e8e6e6;
+  --white: #ffffff;
+  --text-dark: #1f2937;
+  --shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, sans-serif;
+}
+
+body:not(.dashboard-page) {
+  background-color: var(--bg-light);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+}
+
+.login-container {
+  width: 100%;
+  max-width: 450px;
+  padding: 20px;
+  text-align: center;
+}
+.login-box {
+  background: var(--white);
+  padding: 45px 35px;
+  border-radius: 20px;
+  box-shadow: var(--shadow);
+  text-align: center;
+}
+.university-logo {
+  width: 100%;
+  max-width: 240px;
+  height: 220px;
+  display: block;
+  margin: 0 auto 15px;
+}
+.logo-header p {
+  font-size: 13.5px;
+  color: var(--chitkara-blue);
+  font-weight: 700;
+  margin-bottom: 35px;
+}
+
+.verify-title {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.8rem;
+  color: #1a202c;
+  margin-bottom: 12px;
+  font-weight: 780;
+  letter-spacing: -0.5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+.input-group {
+  text-align: center;
+  margin-bottom: 25px;
+}
+.input-group label {
+  display: block;
+  width: 100%;
+  text-align: center;
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--chitkara-blue);
+  margin-bottom: 12px;
+}
+input {
+  width: 100%;
+  padding: 14px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  background-color: #fcfcfc;
+  font-size: 1rem;
+  text-align: center;
+  transition: border-color 0.3s;
+}
+input:focus {
+  border-color: var(--chitkara-red);
+  outline: none;
+}
+
+.instruction-text {
+  font-size: 14px;
+  color: #1f2937;
+  margin-bottom: 25px;
+  line-height: 1.5;
+}
+.instruction-text strong {
+  font-weight: 700;
+  color: #000;
+  font-size: 15px;
+  display: block;
+  margin-top: 4px;
+}
+
+.otp-inputs {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  margin-bottom: 25px;
+}
+.otp-field {
+  width: 45px;
+  height: 50px;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #1e293b;
+  text-align: center;
+  background-color: #fcfcfc;
+  transition: all 0.2s ease-in-out;
+}
+.otp-field:focus {
+  border: 2px solid var(--chitkara-red);
+  outline: none;
+  background-color: #fff;
+  box-shadow: 0 0 5px rgba(197, 60, 52, 0.2);
+}
+
+.sign-in-btn {
+  width: 100%;
+  padding: 16px;
+  background-color: var(--chitkara-red);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition:
+    background 0.3s,
+    transform 0.2s;
+}
+.sign-in-btn:hover {
+  background-color: #a32f29;
+  transform: translateY(-1px);
+}
+
+.footer-links {
+  margin-top: 25px;
+  font-size: 13px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.footer-links a {
+  color: #64748b;
+  text-decoration: none;
+  font-weight: 500;
+}
+.footer-links a:hover {
+  color: var(--chitkara-red);
+  text-decoration: underline;
+}
+.footer-links .privacy {
+  color: #0066cc;
+  font-weight: bold;
+}

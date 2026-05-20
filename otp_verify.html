@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verify Email - Chitkara University</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="login-container">
+
+        <h1 class="verify-title">Verify your email <span style="color: #64748b; font-size: 1.2rem;">🔄</span></h1>
+
+        <div class="login-box">
+            <p class="instruction-text">Insert your 6-digit code here</p><br>
+
+            <div class="otp-inputs">
+                <input type="text" maxlength="1" class="otp-field" autofocus>
+                <input type="text" maxlength="1" class="otp-field" autocomplete="off">
+                <input type="text" maxlength="1" class="otp-field" autocomplete="off">
+                <input type="text" maxlength="1" class="otp-field" autocomplete="off">
+                <input type="text" maxlength="1" class="otp-field" autocomplete="off">
+                <input type="text" maxlength="1" class="otp-field" autocomplete="off">
+            </div>
+
+            <button onclick="validateOTP()" class="sign-in-btn">Verify Email</button>
+
+            <div class="footer-links" style="margin-top: 15px;">
+                <a href="#" onclick="resendOTP()" style="font-size: 12px; color: #64748b;">Didn't get the OTP? Resend
+                    Code</a>
+            </div>
+        </div>
+
+    </div>
+    <script src="otp.js"></script>
+</body>
+
+</html>

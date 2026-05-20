@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Register - New Student</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="login-container">
+        <div class="login-box">
+            <h2>Student Registration</h2>
+            <form id="registerForm">
+                <div class="input-group">
+                    <label>Full Name</label>
+                    <input type="text" id="regName" required>
+                </div>
+                <div class="input-group">
+                    <label>Roll Number</label>
+                    <input type="text" id="regID" required>
+                </div>
+                <div class="input-group">
+                    <label>Hostel Name</label>
+                    <input type="text" id="regHostel" required>
+                </div>
+                <button type="submit" class="sign-in-btn">Complete Registration</button>
+            </form>
+        </div>
+    </div>
+    <script>
+        document.getElementById('registerForm').addEventListener('submit', (e) => {
+            e.preventDefault();
+            const data = {
+                name: document.getElementById('regName').value,
+                id: document.getElementById('regID').value,
+                hostel: document.getElementById('regHostel').value
+            };
+            localStorage.setItem('student_details', JSON.stringify(data));
+            alert("Registration Complete! Please Login.");
+            window.location.href = 'login.html';
+        });
+    </script>
+</body>
+
+</html>
