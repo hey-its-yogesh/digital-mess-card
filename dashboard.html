@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mess Dashboard - Chitkara</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="dashboard-page">
+
+    <header class="top-navbar">
+        <div class="nav-brand">
+            <span class="brand-icon">🍽️</span>
+            <h2>Digital<span class="highlight-text">Mess</span></h2>
+        </div>
+
+        <nav class="nav-links">
+            <button class="nav-item active" data-target="tab-home">Home</button>
+            <button class="nav-item" data-target="tab-menu">Weekly Menu</button>
+            <button class="nav-item" data-target="tab-profile">Profile</button>
+        </nav>
+
+        <div class="nav-actions">
+            <button id="themeToggleBtn" class="theme-toggle-pill">🌙 Dark</button>
+            <button class="icon-btn" title="Notifications">🔔</button>
+
+            <div class="user-profile">
+                <div class="avatar" id="userAvatar">S</div>
+                <span id="studentNameDisplay">Student</span>
+            </div>
+            <button id="logoutBtn" class="nav-logout-btn">Logout</button>
+        </div>
+    </header>
+
+    <main class="dashboard-content">
+
+        <div id="tab-home" class="tab-content active-tab">
+
+            <div class="welcome-banner solid-card">
+                <div>
+                    <h3>Welcome back</h3>
+                    <p>Generate your daily token before heading to the dining hall.</p>
+                </div>
+                <button id="generateTokenBtn" class="primary-btn">Generate Token</button>
+            </div>
+
+            <div id="activeQrCard" class="solid-card qr-card" style="display: none; margin-bottom: 30px;">
+                <h3>Meal Token Active</h3>
+                <p>Present this QR code at the dining hall for <strong id="qrDateDisplay">Today</strong>.</p>
+                <div class="qr-frame">
+                    <img id="dynamicQrImage" src="" alt="Daily QR Code">
+                </div>
+                <p class="qr-status" style="color: var(--accent-color);">Valid for the next meal</p>
+            </div>
+
+            <div class="calendar-card solid-card">
+                <div class="calendar-header">
+                    <h4 id="dynamicMonth">Month</h4>
+                    <span id="tokenStatus" class="status-badge pending">Pending</span>
+                </div>
+                <div class="calendar-grid" id="calendarGrid"></div>
+            </div>
+
+        </div>
+
+        <div id="tab-menu" class="tab-content" style="display: none;">
+            <div class="menu-header-card solid-card">
+                <h3>Select Day</h3>
+                <select id="daySelector" class="minimal-select">
+                    <option value="Monday">Monday</option>
+                    <option value="Tuesday">Tuesday</option>
+                    <option value="Wednesday">Wednesday</option>
+                    <option value="Thursday">Thursday</option>
+                    <option value="Friday">Friday</option>
+                    <option value="Saturday">Saturday</option>
+                    <option value="Sunday">Sunday</option>
+                </select>
+            </div>
+            <div id="menuContainer" class="menu-grid"></div>
+        </div>
+
+        <div id="tab-profile" class="tab-content" style="display: none;">
+            <div class="solid-card" style="padding: 50px; text-align: center;">
+                <div class="avatar" style="width: 80px; height: 80px; font-size: 2rem; margin: 0 auto 20px;">👤</div>
+                <h3 style="margin-bottom: 10px; font-size: 1.5rem;">Student Profile</h3>
+                <p style="color: var(--text-muted); max-width: 400px; margin: 0 auto;">This tab is a placeholder. We
+                    will build out your hostel details, registration info, and meal history here later.</p>
+            </div>
+        </div>
+
+    </main>
+
+    <script src="dashboard.js"></script>
+</body>
+
+</html>
